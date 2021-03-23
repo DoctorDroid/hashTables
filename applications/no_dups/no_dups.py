@@ -1,5 +1,11 @@
 def no_dups(s):
-    # Your code here
+    output = ''
+    s_list = s.lower().split()
+    for word in s_list:
+        if output.find(word) == -1:
+            output = output + word + ' '
+
+    return output.strip(' ')
 
 
 

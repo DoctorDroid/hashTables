@@ -1,5 +1,18 @@
 def word_count(s):
-    # Your code here
+    cache = {}
+    s_list = s.lower().split()
+    for word in s_list:
+        word = word.strip('":;,.-+=/\\|[]}{()*^&')
+        if word == '':
+            continue
+        if not cache.get(word):
+            cache[word] = 0
+
+        cache[word] += 1
+    return cache
+
+        
+
 
 
 
